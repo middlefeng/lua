@@ -122,9 +122,6 @@
     <ClCompile Include="..\..\src\lundump.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\lutf8lib.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\lvm.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -207,6 +204,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\ltable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\lbitlib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
