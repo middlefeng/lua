@@ -782,7 +782,17 @@ static GCObject **sweeplist (lua_State *L, GCObject **p, int countin,
 static GCObject **sweeptolive (lua_State *L, GCObject **p) {
   GCObject **old = p;
   do {
+
+    /**
+     *   if sweeplist() encounters a dead object, the object is removed
+     *   and the returned head "p" is still the same as "old", and that keeps
+     *   the loop continuing
+     * 
+     *   if sweep list() encoutners a live object, the object is skipped
+     *   and the returned head "p" is one item ahead "old", breaking the loop
+     */
     p = sweeplist(L, p, 1, NULL);
+
   } while (p == old);
   return p;
 }
